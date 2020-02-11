@@ -1,0 +1,7 @@
+shrink header to move map and weather up
+2x col wide for map and first child
+4x col wide for all other children
+
+try to limit to single vh/vw
+
+check query params to make sure lat and long are being passed instead of city

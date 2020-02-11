@@ -1,0 +1,2 @@
+change columns to 2x wide for half- screen browser
+set to center
