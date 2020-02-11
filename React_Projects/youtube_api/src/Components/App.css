@@ -1,0 +1,11 @@
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 5vh;
+}
+
+.ui-container {
+  display: flex;
+  margin-top: 5vh;
+}

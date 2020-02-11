@@ -1,0 +1,249 @@
+<!-- Responsive Web Design Projects - Build a Tribute Page
+
+Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/zNqgVx.
+-->
+
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="./GLindex.css" />
+  <link rel="icon" href="https://static.tvtropes.org/pmwiki/pub/images/Green_Lantern_Logo_619.jpg" type="image/x-icon">
+  <title>Green Lantern Tribute Page</title>
+</head>
+
+<!-- User Story #1: My tribute page should have an element with a corresponding id="main", which contains all other elements. -->
+<body id="main">
+  <div class="container">
+    <nav class="navbar" id="navbar">
+      <a id="NavLogo"><img src="https://cdn2.bigcommerce.com/n-nr1m3w/b72t4x/products/5720/images/10905/GL123-AT-2__44233.1390354572.1280.1280.jpg?c=2" alt="NavBarButton"></a>
+      <a href="#HalJordan">Hal Jordan</a>
+      <a href="#GuyGardner">Guy Gardner</a>
+      <a href="#JohnStewart">John Stewart</a>
+      <a href="#KyleRayner">Kyle Rayner</a>
+      <a href="#SimonBaz">Simon Baz</a>
+      <a href="#JessCruz">Jessica Cruz</a>
+      <a href="#AlanScott">Alan Scott</a>
+    </nav>
+    <div id="header" class="header">
+      <!-- User Story #2: I should see an element with a corresponding id="title", which contains a string (i.e. text) that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug"). -->
+      <h1 id="title">The Green Lanterns of Space Sector 2814<h1>
+    </div>
+
+    <div class="content-start" id="content-start">
+      <hr>
+    </div>
+
+    <div class="content">
+      <h2>Meet the Green Lanterns</h2>
+      <!-- User Story #3: I should see a div element with a corresponding id="img-div". -->
+      <div class="img-div">
+        <!-- User Story #4: Within the img-div element, I should see an img element with a corresponding id="image".
+          User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
+          User Story #9: The img element should be centered within its parent element.
+          User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
+          -->
+        <img id="image" src="https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/03/green-lanterns-header.jpg?q=50&fit=crop&w=798&h=407" alt="All 6 Green Lanterns of Earth">
+        <!-- User Story #5: Within the img-div element, I should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in img-div. -->
+        <sub id="image-caption">Left to Right: Kyle Rayner, John Stewart, Jessica Cruz, Hal Jordan, Simon Baz, Guy Gardner.</sub>
+      </div>
+      <br />
+      <!-- User Story #6: I should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page. -->
+      <div id="tribute-info">
+        <h3>What is the Green Lantern Corps???</h3>
+        <p>The Green Lantern Corps is the name of a fictional intergalactic militarized law enforcement organisation appearing in comics published by DC Comics. They patrol the farthest reaches of the DC Universe at the behest of the Guardians, a race of immortals residing on the planet Oa. According to DC continuity, the Green Lantern Corps has been in existence for three billion years, surviving multiple conflicts both internal and foreign. Currently operating divided as pairs amongst the 3600 "sectors" of the universe, there are 7202 members (known commonly as Green Lanterns), two lanterns for every sector, with the exception of sector 2814, which has six members. Each Green Lantern is given a power ring, a weapon granting the use of incredible abilities that are directed by the wearer's own willpower.</p>
+        <!-- User Story #7: I should see an a element with a corresponding id="tribute-link", which links to an outside site that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of target and set it to _blank in order for your link to open in a new tab (i.e. target="_blank"). -->
+        <div class="links">
+          <p>Read more about The Green Lantern Corps on <a id="tribute-link" href="https://en.wikipedia.org/wiki/Green_Lantern_Corps" target="_blank">Wikipedia</a>.<br>Back to <a class="top" href="#content-start">Top</a></p>
+        </div>
+      </div>
+
+
+      <div id="Oans" class="lanternCard">
+        <div class="intro-profile">
+          <img src="https://i.pinimg.com/originals/27/7d/aa/277daa41b74f58cf13bed2d34f4a2688.jpg" alt="The Guardians of the Universe">
+          <div class="lantern-stats">
+            <h3><u>Oans: The Guardians of the Universe</u></h3>
+            <ul>
+              <li>Height: 3'5"</li>
+              <li>Weight: 62 lbs</li>
+              <li>Eye Color: Green</li>
+              <li>Hair Color: White</li>
+              <li>Birthplace: Planet Oa</li>
+            </ul>
+          </div>
+        </div>
+        <p>The Guardians of the Universe are the founders and leaders of the interstellar law enforcement agency known as the Green Lantern Corps, which they administer from their homeworld Oa at the center of the Universe. The Guardians resemble short humans with blue skin and white hair. They are depicted as being immortal and are the oldest living beings created in the Universe, but not the first.</p>
+        <div class="links">
+          <p>Read more about The Guardians on <a id="tribute-link" href="https://en.wikipedia.org/wiki/Guardians_of_the_Universe" target="_blank">Wikipedia</a>.<br>Back to <a class="top" href="#content-start">Top</a></p>
+        </div>
+      </div>
+
+      <div id="HalJordan" class="lanternCard">
+        <div class="lantern-content">
+          <div class="intro-profile">
+            <img src="https://comicvine1.cbsistatic.com/uploads/scale_medium/6/66303/2290279-screen_shot_2012_04_11_at_2.40.28_pm.png" alt="Hal Jordan">
+            <div class="lantern-stats">
+              <h3><u>Hal Jordan</u></h3>
+              <ul>
+                <li>Height: 6'2"</li>
+                <li>Weight: 186 lbs</li>
+                <li>Eye Color: Brown</li>
+                <li>Hair Color: Brown</li>
+                <li>Birthplace: Coast City, CA</li>
+                <li>Partner: John Stewart</li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <p>Hal Jordan is a fighter pilot, a member and occasionally leader of an intergalactic police force called the Green Lantern Corps, as well as a founding member of the Justice League. His powers derive from his power ring and Green Lantern battery, which in the hands of someone capable of overcoming great fear allows the user to channel their will power into creating all manner of fantastic constructs. Jordan uses this power to fly, even through the vacuum of space; to create shields, swords, and lasers; and to construct his Green Lantern costume, which protects his secret identity in his civilian life on Earth. Jordan and all other Green Lanterns are monitored and empowered by the mysterious Guardians of the Universe.</p>
+          </div>
+        </div>
+        <div class="links">
+          <p>Read more about Hal Jordan on <a id="tribute-link" href="https://en.wikipedia.org/wiki/Hal_Jordan" target="_blank">Wikipedia</a>.<br>Back to <a class="top" href="#content-start">Top</a></p>
+        </div>
+      </div>
+
+      <div id="GuyGardner" class="lanternCard">
+        <div class="lantern-content">
+          <div class="intro-profile">
+            <img src="https://comicvine1.cbsistatic.com/uploads/original/11114/111147698/4646607-4645573-img_0100.jpg" alt="Guy Gardner with both Green and Red Power Rings">
+            <div class="lantern-stats">
+              <h3><u>Guy Gardner</u></h3>
+              <ul>
+                <li>Height: 6'0"</li>
+                <li>Weight: 180 lbs</li>
+                <li>Eye Color: Blue</li>
+                <li>Hair Color: Red</li>
+                <li>Birthplace: Baltimore, MD</li>
+                <li>Partner: Kyle Rayner</li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <p>The appointed Green Lantern of Space Sector 2814, an alien named Abin Sur from the planet Ungara, crash-landed on Earth after being mortally wounded. As Sur died, his power ring sought and found two potential successors: Guy Gardner
+            and Hal Jordan. Jordan was nearer to the crash, so he was chosen over Gardner. Gardner was relegated to backup status should anything happen to Jordan. When Jordan became aware of Gardner's status as his backup, he went out of his way to set up a chance meeting, and the two became friends. Though Gardner was originally naive to Jordan's secret identity, he eventually assisted Jordan during his adventures.He is later partnered with Jordan after completing his training under Kilowog.</p>
+          </div>
+        </div>
+        <div class="links">
+          <p>Read more about Guy Gardner on <a id="tribute-link" href="https://en.wikipedia.org/wiki/Guy_Gardner_(comics)" target="_blank">Wikipedia</a>.<br>Back to <a class="top" href="#content-start">Top</a></p>
+        </div>
+      </div>
+
+      <div id="JohnStewart" class="lanternCard">
+        <div class="lantern-content">
+          <div class="intro-profile">
+            <img src="https://comicvine1.cbsistatic.com/uploads/scale_medium/3/31666/1078382-john_stewart.jpg" alt="John Stewart being pursued by the Black Lantern Corps.">
+            <div class="lantern-stats">
+              <h3><u>John Stewart</u></h3>
+              <ul>
+                <li>Height: 6'1"</li>
+                <li>Weight: 201 lbs</li>
+                <li>Eye Color: Brown</li>
+                <li>Hair Color: Black</li>
+                <li>Birthplace: Detroit, MI</li>
+                <li>Partner: Hal Jordan (Currently "Corps Leader")</li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <p>John Stewart is an architect, later "retconned" into a veteran U.S. Marine from Detroit, Michigan, who was selected by the Guardians as a backup Green Lantern to then-current Green Lantern Hal Jordan, after the previous backup, Guy Gardner, was seriously injured after getting hit by a car while trying to save a civilian. Although Jordan objected to the decision after seeing that Stewart had a belligerent attitude to authority figures, the Guardians stood by their decision, and chided Jordan for his supposed bigoted outlook on the issue. Jordan explained that he just felt that even though Stewart might have the integrity for the task, he "obviously would have a chip on his shoulder bigger than the rock of Gibraltar."</p>
+          </div>
+          <div class="links">
+            <p>Read more about John Stewart on <a id="tribute-link" href="https://en.wikipedia.org/wiki/John_Stewart_(comics)" target="_blank">Wikipedia</a>.<br>Back to <a class="top" href="#content-start">Top</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="KyleRayner" class="lanternCard">
+        <div class="lantern-content">
+          <div class="intro-profile">
+            <img src="https://comicvine1.cbsistatic.com/uploads/scale_small/1/18154/4277217-4684753117-42759.jpg" alt="Kyle Rayner as White Lantern">
+            <div class="lantern-stats">
+              <h3><u>Kyle Rayner</u></h3>
+              <ul>
+                <li>Height: 5'11"</li>
+                <li>Weight: 175 lbs</li>
+                <li>Eye Color: Dark Green</li>
+                <li>Hair Color: Black</li>
+                <li>Birthplace: Los Angeles, CA</li>
+                <li>Partner: Guy Gardner</li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <p>Before he acquired a Green Lantern power ring, Kyle Rayner was a struggling-but-gifted freelance comic book artist who was raised in North Hollywood and lived and worked in Los Angeles. After Hal Jordan, grief-stricken over the destruction of his home town of Coast City, went on a mad rampage killing various members of the Green Lantern Corps and the Guardians of the Universe, Rayner was found by the last surviving Guardian of the Universe, Ganthet. Ganthet gave Kyle the last working Green Lantern power ring that would allow him to conjure any form of matter or energy through sheer force of will.</p>
+          </div>
+        </div>
+        <div class="links">
+          <p>Read more about Kyle Rayner on <a id="tribute-link" href="https://en.wikipedia.org/wiki/Kyle_Rayner" target="_blank">Wikipedia</a>.<br>Back to <a class="top" href="#content-start">Top</a></p>
+          <p ></p>
+        </div>
+      </div>
+
+      <div id="SimonBaz" class="lanternCard">
+        <div class="lantern-content">
+          <div class="intro-profile">
+            <img src="https://d338htdsho3c0w.cloudfront.net/wp-content/uploads/2013/03/GLC16_4.jpg" alt="Simon Baz Under Siege">
+            <div class="lantern-stats">
+              <h3><u>Simon Baz</u></h3>
+              <ul>
+                <li>Height: 5'11"</li>
+                <li>Weight: 183 lbs</li>
+                <li>Eye Color: Brown</li>
+                <li>Hair Color: Black</li>
+                <li>Birthplace: Dearborn, MI</li>
+                <li>Partner: Jessica Cruz</li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <p>Simon Baz was a Lebanese-American child living in Dearborn, Michigan, during the events of the September 11 attacks in 2001. Growing up, Simon and his sister Sira were both persecuted due to their ethnicity. As a young adult, Simon got involved in street racing, and eventually car theft; the former put his brother-in-law in a coma in the hospital. Simon is fired from his job and, in a moment of desperation, he steals a car. While trying to evade the police in the stolen vehicle, Simon finds out that there is a bomb in it. Simon drives the van into the abandoned car factory he was laid off from, knowing that no one would be hurt in the explosion. The resulting explosion is seen as an act of terrorism by the authorities, and Simon is brought in for questioning. As Simon is being interrogated, Hal Jordan and Sinestro's rings fused and form a malfunctioning Green Lantern Power Ring that finds Simon, and selects him as the new wielder, flying him away from captivity.</p>
+          </div>
+        </div>
+        <div class="links">
+          <p>Read more about Simon Baz on <a id="tribute-link" href="https://en.wikipedia.org/wiki/Simon_Baz" target="_blank">Wikipedia</a>.<br>Back to <a class="top" href="#content-start">Top</a></p>
+        </div>
+      </div>
+
+      <div id="JessCruz" class="lanternCard">
+        <div class="lantern-content">
+          <div class="intro-profile">
+            <img src="https://pbs.twimg.com/media/D60jJaVUYAAB5kQ?format=jpg&name=4096x4096" alt="Jessica Cruz Looking All Badass">
+            <div class="lantern-stats">
+              <h3><u>Jessica Cruz</u></h3>
+              <ul>
+                <li>Height: 5'11"</li>
+                <li>Weight: 160 lbs</li>
+                <li>Eye Color: Brown</li>
+                <li>Hair Color: Brown</li>
+                <li>Citizenship: American</li>
+                <li>Partner: Simon Baz</li>
+                <li>Marital Status: Single</li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <p>Jessica Cruz and her friends are on a hunting trip when they accidentally stumble across two men burying a body. The men brutally murder her friends. Jessica manages to escape but is left traumatized. The Ring of Volthoom, which feeds
+            off fear and had abandoned Power Ring after his death during the Crime Syndicate's incursion to Prime Earth, is able to locate her due to her trauma. Unlike the previous ring bearers, she does not willingly accept the ring, but is forced to accept it. The Ring tortures Jessica with physical and psychological pain. The Ring explains that it is using Jessica to attract the being that destroyed Earth-Three to Prime Earth because he is now dying (for reasons not explained) and wants to take the planet with him. Batman is able to de-power the ring after convincing Jessica to face her fears. Jessica later succumbs to effects of the AMAZO virus, but is soon cured. Hal Jordan returns to Earth to teach Jessica how to control her ring.</p>
+          </div>
+        </div>
+        <div class="links">
+          <p>Read more about Jessica on <a id="tribute-link" href="https://en.wikipedia.org/wiki/Jessica_Cruz" target="_blank">Wikipedia</a>.<br>Back to <a href="#content-start">Top</a></p>
+          <p class="top"></p>
+        </div>
+      </div>
+
+      <div id="AlanScott">
+        <h3>See Also: Alan Scott</h3>
+        <p>Thousands of years ago, a mystical "green flame" fell to Earth in ancient China as a meteor. A voice in the flame predicted that it would act three times: once to bring death, once to bring life, and once to bring power. For the first prophecy, a lamp-maker crafted the green metal of the meteor into a lamp. In fear and as punishment for what they thought sacrilege, the local villagers killed him, only to be destroyed by a sudden burst of the green flame. For the second, in modern times, the lamp came into the hands of a patient of a mental institution who fashioned the lamp into a modern train lantern. The green flame restored him to sanity and gave him a new life. For the third, by 1940, after having already fulfilled the first two-thirds of this prophecy, the lantern fashioned from the meteoric metal fell into the hands of Alan Scott, a young railroad engineer. Following a railroad bridge collapse, the flame instructs Scott in how to fashion a ring from its metal, to give him fantastic powers as the superhero Green Lantern. He adopts a colorful costume of red, purple, yellow, and brown.</p>
+      </div>
+      <div class="links">
+        <p>Read more about Alan Scott on <a id="tribute-link" href="https://en.wikipedia.org/wiki/Alan_Scott" target="_blank">Wikipedia</a>.<br>Back to <a class="top" href="#content-start">Top</a></p>
+      </div>
+    </div>
+  </div> <!-- End `.container` -->
+</body>
+
+</html>

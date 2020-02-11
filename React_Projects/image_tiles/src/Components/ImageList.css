@@ -1,0 +1,12 @@
+body {
+	background-color: rgb(5, 18, 3);
+}
+
+.image-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill);
+}
+
+.image-list img {
+	width: 250px;
+}

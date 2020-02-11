@@ -1,0 +1,162 @@
+body {
+  background-color: black;
+  color:white;
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+code {
+  background-color: grey;
+  color: black;
+  padding: 0.5em;
+}
+
+img {
+  min-height: 5em;
+  width: auto;
+}
+
+main {
+  padding-left: 1em;
+  padding-top: 8em;
+}
+
+nav {
+  background-color: grey;
+  display: block;
+  font-size: 2em;
+  height: 5%;
+  position: fixed;
+  text-align: left;
+  width: 100%;
+}
+
+nav > a {
+  display: none;
+  font-size: 2em;
+  text-align: left;
+  text-decoration: none;
+}
+
+nav:hover > a {
+  background-color: grey;
+  color: black;
+  display: block;
+  font-size: 1.5em;
+  padding: 0.25em;
+}
+
+nav > a:hover {
+  background-color: black;
+  color: white;
+  display: block;
+}
+
+nav > header {
+  display: block;
+  font-size: 2em;
+  padding-right: 17%;
+}
+
+section {
+  margin-top: 3em;
+}
+
+section > header {
+  background-color: lightgrey;
+  color: black;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.navbox {
+  background-color: black;
+  height: 0.25em;
+  margin: 0.25em;
+  width: 1.5em;
+}
+
+.page-title {
+  font-size: 1em;
+}
+
+.quick-nav {
+  background-color: grey;
+  color: black;
+  margin-left: 0;
+  max-width: 22.5%;
+  padding: 0.5em;
+  text-decoration: underline;
+}
+
+.sections {
+  margin-bottom: 5%;
+}
+
+#navbox-box {
+  margin: 1.5%;
+}
+
+@media (min-width: 411px) {
+
+  main {
+    margin-left: 20%;
+    padding-top: 2em;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    height: 100%;
+    justify-content: space-around;
+    position: fixed;
+    text-align: center;
+    width: 20%;
+  }
+
+  header {
+  display: block;
+  font-size: 2em;
+  text-align: center;
+  }
+
+  img {
+    max-height: 15em;
+    padding: 3%;
+  }
+
+  nav > a {
+    background-color: grey;
+    color: black;
+    display: block;
+    font-size: 1.5em;
+    padding: 0.25em;
+    text-align: center;
+  }
+
+  nav > a:hover {
+    background-color: black;
+    color: white;
+    display: block;
+  }
+
+  section {
+    margin-top:0;
+    padding-bottom:2em;
+  }
+
+  .quick-nav {
+    text-align: center;
+    width: 8%;
+  }
+
+  #navbox-box {
+    display: none;
+  }
+
+}

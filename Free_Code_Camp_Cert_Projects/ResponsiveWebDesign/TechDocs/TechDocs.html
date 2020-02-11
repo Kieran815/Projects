@@ -1,0 +1,132 @@
+<!-- Build a Technical Documentation Page
+Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/NdrKKL.
+ -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./TechDocs.css">
+    <title>Titanium on FireTV</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- User Story #8: I can see a nav element with a corresponding id="navbar".
+
+      User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
+
+      <nav id="navbar">
+        <!-- User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.
+        User Story #11: The header element in the navbar must come before any link (a) elements in the navbar. -->
+        <header>
+          <div class="page-title">
+            TitaniumTV on FireStick
+          </div>
+        </header>
+        <div id="navbox-box">
+          <div class="navbox"></div>
+          <div class="navbox"></div>
+          <div class="navbox"></div>
+        </div>
+        <!-- User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.
+        User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").
+        User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header. -->
+        <a class="nav-link" href="#configure-firestick">Configure FireStick</a>
+        <a class="nav-link" href="#install-downloader">Install Downloader</a>
+        <a class="nav-link" href="#titanium">Titanium APK</a>
+        <a class="nav-link" href="#media-player">Media Players</a>
+        <a class="nav-link" href="#configure-titanium">Configure Titanium</a>
+      </nav>
+      <!-- User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation). -->
+      <main id="main-doc">
+          <div class="sections">
+            <!-- User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5.
+            User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java"). -->
+            <section class="main-section" id="configure-firestick">
+              <!-- User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section. -->
+              <header><u>Configure FireStick</u></header>
+              <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
+              <ul>
+                <li>Step 1: Enable 3rd-Party Apps</li>
+              </ul>
+              <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
+              <p>First, you need to enable the FireStick to install third-party apps. This section will walk you through all the steps.</p>
+              <p>Power on the device and go to the `Settings` tab at the top of the screen.</p>
+              <img src="https://g8m9f6u5.stackpathcdn.com/wp-content/uploads/2018/10/FireStick-Settings-Device-768x432.jpg" alt="FireTV Settings Page">
+              <p>Next, scroll over to the `Device` icon and select it, then select `Developer Options`.</p>
+              <img src="https://g8m9f6u5.stackpathcdn.com/wp-content/uploads/2018/10/FireStick-DeveloperOptions-768x432.jpg" alt="Device Page highlighting Developer Options">
+              <p>Scroll down to `Apps from Unknown Sources` and turn it `ON`, then confirm.</p>
+              <img src="https://g8m9f6u5.stackpathcdn.com/wp-content/uploads/2018/10/FireStick-Unknown-Sources-768x432.jpg" alt="Developer Options page highlighting `Apps from Unknown Sources`">
+              <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+              <p class="quick-nav">Quick-Nav:</p>
+              <code>
+                Power ON > Settings > Device > Developer Options > Apps from Unknown Sources > Turn `ON`
+              </code>
+            </section>
+            <section class="main-section" id="install-downloader">
+              <header><u>`Downloader` App</u></header>
+              <ul>
+                <li>Step 2: Install `Downloader` from the Amazon App Store</li>
+              </ul>
+              <p>On top of the FireStick home screen, go to the `Search` tab and search for `Downloader`. After `Downloader` installs, open it. The screen will look like this:</p>
+              <img src="https://g8m9f6u5.stackpathcdn.com/wp-content/uploads/2018/10/titanium-tv-on-firestick-1-768x432.jpg" alt="`Downloader` home screen">
+              <p>Now you are ready to install Titanium.</p>
+              <p class="quick-nav">Quick-Nav:</p>
+              <code>
+                Home > Search > input `Downloader` > Press `GO`
+              </code>
+            </section>
+            <section class="main-section" id="titanium">
+              <header><u>Download `TitaniumTV` APK</u></header>
+              <ul>
+                <li>Step 3: Use `Downloader` to download the Titanium APK file</li>
+              </ul>
+              <p>Click in the `url` field, then enter:</p>
+              <img src="https://g8m9f6u5.stackpathcdn.com/wp-content/uploads/2018/10/titanium-tv-on-firestick-2-768x432.jpg" alt="Enter url into the search bar">
+              <br>
+              <code>
+                https://www.firesticktricks.com/titv
+              </code>
+              <p>then click the `Go` button.</p>
+              <p>Installation should take about a minute. When the app is finished downloading, click `DONE`</p>
+              <img src="https://g8m9f6u5.stackpathcdn.com/wp-content/uploads/2018/10/titanium-tv-on-firestick-6-768x432.jpg" alt="Install finished, click `DONE`">
+              <p>Make sure to Delete the APK file after completing installation.</p>
+              <p class="quick-nav">Quick-Nav:</p>
+              <code>
+                Open `Downloader` > Search `firesticktricks.com/titv` > Scroll down and click `Install`
+              </code>
+            </section>
+            <section class="main-section" id="media-player">
+              <header><u>Choose a Media Player</u></header>
+              <ul>
+                <li>Step 4: Install an External Media Player</li>
+              </ul>
+              <p>Now, you need to install a media player to play the videos on your FireStick. The Recommended App is <a href="https://www.mxplayer.in/">MX Player</a>. Open your `Downloader` app again and search:</p>
+              <img src="https://g8m9f6u5.stackpathcdn.com/wp-content/uploads/2018/10/mxplayer-on-firestick-1-768x432.jpg" alt="use `Downloader` to install `MX Player`">
+              <br>
+              <code>
+                http://bit.ly/mxfire
+              </code>
+              <p>like in Step 3. Follow the instructions to install MX Player.</p>
+              <p class="quick-nav">Quick-Nav:</p>
+              <code>Open `Downloader` > Search `http://bit.ly/mxfire` > Scroll down and click `Install`</code>
+            </section>
+            <section class="main-section" id="configure-titanium">
+              <header>Configure Titanium</header>
+              <ul>
+                <li>Step 5: Run Titanium for the First Time</li>
+              </ul>
+              <p>When you run the Titanium TV app on FireStick for the first time, you are greeted with the Changelog window. When you are past it, you see a Disclaimer window. Here, you need to click Accept. Next, you are asked to choose the default video player. Select MX Player to make it the default player.</p>
+              <img src="https://g8m9f6u5.stackpathcdn.com/wp-content/uploads/2018/10/titanium-tv-on-firestick-20-768x432.jpg" alt="Titanium Initial Default Video Player Selection Screen">
+              <p>You can always change this in Settings.</p>
+              <p class="quick-nav">Quick-Nav:</p>
+              <code>
+                Open Titanium TV > click `Next` > Scroll down to `MX Player` > Click to set as `Default Video Player`
+              </code>
+            </section>
+          </div> <!-- END `sections` div -->
+
+        <!-- User Story #15: My Technical Documentation page should use at least one media query. -->
+      </main>
+    </div>
+  </body>
+</html>

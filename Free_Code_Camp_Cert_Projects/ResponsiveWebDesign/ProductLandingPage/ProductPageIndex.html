@@ -1,0 +1,69 @@
+<!--
+User Story #12: When I click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit) that confirms the email address was entered and that it posted successfully.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./ProductLandingPage.css">
+    <title>FCC Product Landing</title>
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <!-- User Story #1: My product landing page should have a header element with a corresponding id="header".
+      User Story #14: My product landing page should have at least one media query.
+      User Story #15: My product landing page should utilize CSS flexbox at least once.
+      -->
+      <header id="header">
+        <!-- User Story #2: I can see an image within the header element with a corresponding id="header-img". A company logo would make a good image here. -->
+        <img id="header-img" src="https://www.logolynx.com/images/logolynx/98/98ff5846e2b51dfa5f8516fada70bb39.jpeg" alt="Company Logo">
+        <br>
+        <!-- User Story #3: Within the #header element I can see a nav element with a corresponding id="nav-bar".
+        User Story #13: The navbar should always be at the top of the viewport. -->
+        <nav id="nav-bar" class="sticky">
+          <!-- User Story #4: I can see at least three clickable elements inside the nav element, each with the class nav-link. -->
+          <!-- User Story #5: When I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page. -->
+          <a href="#ReactJS" id="react-link" class="nav-link">ReactJS</a>
+          <a href="#email" id="email-link" class="nav-link">E-Mail</a>
+          <a href="#" id="top-link" class="nav-link">Top</a>
+        </nav>
+      </header>
+      <!-- User Story #6: I can watch an embedded product video with id="video". -->
+      <div class="video-player">
+        <h3 id="ReactJS"><u>ReactJS</u></h3>
+        <iframe id="video" width="720" height="480" src="https://www.youtube.com/embed/DLX62G4lc44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+
+      <!-- User Story #7: My landing page has a form element with a corresponding id="form". -->
+      <form id="form" class="">
+        <label for="firstName">
+          First Name:
+          <input type="text" id="firstName" required>
+        </label>
+        <br>
+        <label for="lastName">
+          Last Name:
+          <input type="text" id="lastName" required>
+        </label>
+        <br>
+        <label for="email">
+          E-Mail:
+          <!-- User Story #8: Within the form, there is an input field with id="email" where I can enter an email address.
+          User Story #9: The #email input field should have placeholder text to let the user know what the field is for.
+          User Story #10: The #email input field uses HTML5 validation to confirm that the entered text is an email address.
+          -->
+          <input id="email" type="email" name="email" placeholder="your_address@server.com" required>
+        </label>
+        <br>
+        <!-- User Story #11: Within the form, there is a submit input with a corresponding id="submit". -->
+        <input id="submit" type="submit" name="submit" value="submit">
+      </form>
+
+    </div> <!-- end container -->
+   </body>
+</html>

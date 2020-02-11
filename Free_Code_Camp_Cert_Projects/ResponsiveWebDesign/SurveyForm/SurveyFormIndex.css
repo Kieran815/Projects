@@ -1,0 +1,33 @@
+body {
+  height: 100%;
+  background-color: rgb(8, 17, 8);
+  color: white;
+}
+
+form > div {
+  border: 1px solid white;
+  border-radius: 2%;
+  margin: 1vh;
+  padding: 1vh;
+}
+
+input {
+  margin: 1vh;
+}
+
+input:valid {
+  border: 1px solid black;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+select {
+  margin: 1vh;
+}
+
+textarea {
+  margin: auto;
+
+}

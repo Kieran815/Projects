@@ -1,0 +1,186 @@
+/*
+#056608
+#346605
+#566653
+#056366
+#7BB661
+#660505
+#ff00ff
+#b6617b
+#663505
+#b67f61
+#060566
+#6195b6
+#ffff00
+*/
+body {
+  display: block;
+  font-size: 1.5em;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+img {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.content {
+  display: block;
+  margin-top: 3em;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 1em;
+}
+
+.header {
+  background-color: #056608;
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 2.2em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 3.5em;
+  width: 100%;
+}
+
+.header>h1 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.navbar {
+  float: right;
+  overflow: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  z-index: 1;
+}
+
+.navbar a {
+  background-color: #056608;
+  color: #660505;
+  display: none;
+  font-size: 1.5em;
+  text-align: left;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.navbar a:first-child {
+  display: block;
+}
+
+.navbar:hover>a {
+  display: block;
+  padding: 0.25em;
+  z-index: 1;
+}
+
+.navbar:hover>a:first-child {
+  padding: 0;
+}
+
+.navbar>a:hover {
+  background-color: #7BB661;
+  width: auto;
+}
+
+.lanternCard {
+  background-image: url("https://i.pinimg.com/474x/20/fe/d6/20fed66c2bb51531210bff6a560cf13b--grunge-texture.jpg");
+  background-size: 100% 100%;
+  border: 2px solid #056608;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  object-fit: cover;
+  margin: 0.5em;
+}
+
+.lantern-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-div>sub {
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.intro-profile {
+  align-items: center;
+  display: flex;
+  height: auto;
+  justify-content: space-around;
+  margin-left: 1.5em;
+}
+
+.intro-profile>img {
+  height: auto;
+  max-width: 10em;
+  border: 0.3em solid #D3FACB;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.top a {
+  color: #ffff00;
+}
+
+#image {
+  /* Main image for intro */
+  border-radius: 10%;
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+#main {
+  height: 100%;
+  background-color: #000;
+  color: white;
+}
+
+#NavLogo {
+  height: 2.32em;
+  width: 2.32em;
+}
+
+#tribute-info {
+  background-color: black;
+}
+
+@media (max-width: 450px) {
+  .intro-profile {
+    flex-direction: column;
+  }
+}

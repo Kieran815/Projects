@@ -1,0 +1,59 @@
+.season-display {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.icon-left {
+	left: 10px;
+	top: 10px;
+}
+
+.icon-right {
+	align-self: flex-end;
+	margin: 5px;
+}
+
+.seasonText {
+	text-align: center;
+}
+
+.season-display.Spring {
+	background-color: rgb(49, 164, 164);
+	color: rgb(84, 7, 144);
+}
+
+.season-display.Spring i {
+	color: rgb(49, 164, 164);
+	background-color: rgb(84, 7, 144);
+}
+
+.season-display.Summer {
+	background-color: rgb(222, 214, 18);
+	color: rgb(242, 11, 11);
+}
+
+.season-display.Summer i {
+	color: rgb(222, 214, 18);
+	background-color: rgb(242, 11, 11);
+}
+
+.season-display.Fall i {
+	color: rgb(36, 16, 2);
+	background-color: rgb(176, 81, 11);
+}
+
+.season-display.Fall {
+	background-color: rgb(36, 16, 2);
+	color: rgb(176, 81, 11);
+}
+
+.season-display.Winter {
+	background-color: rgb(28, 123, 222);
+	color: rgb(242, 239, 249);
+}
+
+.season-display.Winter i {
+	background-color: rgb(242, 239, 249);
+	color: rgb(28, 123, 222);
+}

@@ -1,0 +1,116 @@
+<!--  Responsive Web Design Projects - Build a Survey Form
+
+Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/VPaoNP.
+
+You can build your project by forking this CodePen pen. Or you can use this CDN link to run the tests in any environment you like: https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./SurveyFormIndex.css">
+    <title>Survey Form Validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <!-- User Story #1: I can see a title with id="title" in H1 sized text. -->
+        <h1 id="title">Survey Form Validation</h1>
+        <!-- User Story #2: I can see a short explanation with id="description" in P sized text. -->
+        <p id="description">
+            This is a sample HTML document to experiment with Forms and Form Validation for FreeCodeCamp.org.<br>
+            Thank You Quincy Larson and Beau Carnes.
+        </p>
+      </div>
+      <div id="form-container">
+        <!-- User Story #3: I can see a form with id="survey-form". -->
+        <form id="survey-form" method="post">
+          <div id="basic-info" class="">
+            <h3>Contact Information:</h3>
+            <!-- User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
+            -->
+            <label id="name-label" for="name">First Name: </label>
+            <br>
+            <!-- User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
+            User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
+            -->
+            <input id="name" type="text" name="name" value="" placeholder="First Name" required>
+            <br>
+            <label id="last-name-label" for="last-name">Last Name: </label>
+            <br>
+            <input id="last-name" type="text" name="last-name" value="" placeholder="Last Name" required>
+            <br>
+            <label id="phone-label" for="phone">Phone Number: </label>
+            <br>
+            <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-2368" required>
+            <select id="phone-type" class="" name="phone-type">
+              <option value="home">Home</option>
+              <option value="mobile" selected>Mobile</option>
+              <option value="work">Work</option>
+            </select>
+            <br>
+            <label id="email-label" for="email">E-Mail: </label>
+            <br>
+            <!-- User Story #5: Inside the form element, I am required to enter an email in a field with id="email".
+            User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error. -->
+            <input id="email" type="email" name="email" value="" placeholder="your_email@server.com" required>
+          </div>
+          <br>
+          <div id="the-goat" class="personality">
+            <h3>Tell Us About Yourself:</h3>
+            <label id="number-label" for="number">Favorite  <u>Number</u>: </label>
+            <br>
+            <!-- User Story #7: Inside the form, I can enter a number in a field with id="number".
+            User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+            User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
+            -->
+            <input id="number" type="number" name="number"  min="1" max="9" placeholder="1-9" required>
+            <br>
+            <label id="dropdown-label" for="dropdown">Who Rocks <b>Harder</b>?!?!?!</label>
+            <br>
+            <!-- User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown". -->
+            <select id="dropdown" class="select-rocker" name="rock-down">
+              <option value="I Rock">Daddy</option>
+              <option value="Lexx Rocks" selected>Lexx</option>
+            </select>
+            <br>
+            <!-- User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. -->
+            <div id="radio-input" class="radio">
+              <p>Who is the <em>Best Looking</em> Little Guy Around?<br>Select One:</p>
+              <input type="radio" name="handsome" value="Lexx" checked>Lexx</input>
+              <br>
+              <input type="radio" name="handsome" value="Lexifer">Lexifer</input>
+              <br>
+              <input type="radio" name="handsome" value="Alexxander">Alexxander</input>
+            </div>
+            <br>
+            <!-- User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
+
+            -->
+            <div class="checkboxes">
+              <p>Select some Hobbies We Share:</p>
+              <label for="parenting"><input type="checkbox" name="hobbies" value="coding">Child Parenting</label>
+              <br>
+              <label for=""><input type="checkbox" name="hobbies" value="coding">Pet Parenting</label>
+              <br>
+              <label for="coding"><input type="checkbox" name="hobbies" value="coding" checked>Coding</label>
+              <br>
+              <label for="video-games"><input type="checkbox" name="hobbies" value="coding">Video Games</label>
+            </div>
+          </div>
+          <br>
+          <div id="comment-section" class="comment-section">
+            <h3>Share with Us!</h3>
+            <!-- User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments. -->
+            <textarea name="comments" rows="8" cols="60" placeholder="Questions? Comments? Tell Us Your Thoughts!!!"></textarea>
+          </div>
+          <br>
+          <!-- User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
+          <button id="submit" type="button" name="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+body {
+  background-color: #000;
+}
+
+nav {
+  background-color: orange;
+  position: fixed;
+}
+
+#welcome-section {
+  background-color: white;
+  display: flex;
+  height:100vh;
+}
+
+#welcome-section > h1 {
+  margin: auto;
+  text-align: center;
+}
