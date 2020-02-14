@@ -1,5 +1,7 @@
 import React, {useRef, useEffect, useState } from 'react';
 import InputManager from "./InputManager";
+import Player from "./Player";
+import World from "./World";
 
 // functional component with `props` destructured
 
@@ -8,16 +10,29 @@ import InputManager from "./InputManager";
 const Rogue = ({ width, height, tileSize }) => {
   // hooks
   const canvasRef = useRef();
-  const [player, setPlayer] = useState({ x: 64, y: 128 })
+  // commented out to put player inside world
+  //const [player, setPlayer] = useState(new Player(1, 2, tileSize));
+  const [world, setWorld] = useState(new World(width, height,tileSize));
   let inputManager = new InputManager();
   const handleInput = (action, data) => {
-    console.log(`Handle Input: ${action}:${JSON.stringify(data)}`);
-    let newPlayer = {...player};
-    newPlayer.x += data.x * tileSize;
-    newPlayer.y += data.y * tileSize;
-    setPlayer(newPlayer);
+    let newWorld = new World();
+    Object.assign(newWorld, world);
+    newWorld.movePlayer(data.x, data.y);
+    setWorld(newWorld);
   };
   // `useEffect` is a lifecycle hook, gets called when DOM changes
+  useEffect(() => {
+    console.log("Create Map");
+    let newWorld = new World();
+    Object.assign(newWorld, world);
+    // call to create map with walls in it
+    newWorld.createCellularMap();
+    newWorld.startEmptySpace(world.player);
+    setWorld(newWorld);
+    // empty array keeps map from re-rendering with each player entity move
+    // eslint-disable-next-line
+  },[]);
+
   useEffect(() => {
     inputManager.bindKeys();
     inputManager.subscribe(handleInput);
@@ -30,8 +45,8 @@ const Rogue = ({ width, height, tileSize }) => {
   useEffect(() => {
     const ctx = canvasRef.current.getContext('2d');
     ctx.clearRect(0,0, width * tileSize, height * tileSize);
-    ctx.fillStyle="#000";
-    ctx.fillRect(player.x, player.y,16,16);
+    // make sure to draw `World` before `player`
+    world.draw(ctx);
   });
   return (
     <canvas
