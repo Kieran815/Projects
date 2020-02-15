@@ -18,12 +18,16 @@ class World {
     return this.entities[0];
   }
 
+  add(entity) {
+    this.entities.push(entity);
+  }
+
   startEmptySpace(entity) {
-    for(let i = entity.x; i < this.width; i++) {
-      for(let j = entity.y; j < this.height; j++) {
-        if(this.worldMap[i][j] === 0) {
-          entity.x = i;
-          entity.y = j;
+    for(let x = entity.x; x < this.width; x++) {
+      for(let y = entity.y; y < this.height; y++) {
+        if(this.worldMap[x][y] === 0) {
+          entity.x = x;
+          entity.y = y;
           return
         }
       }
@@ -33,7 +37,7 @@ class World {
   isWall(x,y) {
     return (
       this.worldMap[x] === undefined ||
-      this.worldMap[y === undefined] ||
+      this.worldMap[y] === undefined ||
       this.worldMap[x][y] === 1
     );
   }
@@ -42,7 +46,7 @@ class World {
     let tempPlayer = this.player.copyPlayer();
     tempPlayer.move(dx, dy);
     if(this.isWall(tempPlayer.x, tempPlayer.y)) {
-      console.log(`Wall Blocking ${tempPlayer.x}:${tempPlayer.ys}`);
+      console.log(`Wall Blocking ${tempPlayer.x}:${tempPlayer.y}`);
     } else {
       this.player.move(dx, dy);
     }
@@ -79,11 +83,11 @@ class World {
 
   draw(context) {
     //double for-loop check every tile in grid
-    for(let i = 0; i < this.width; i++) {
-      for(let j = 0; j < this.height; j++) {
+    for(let x = 0; x < this.width; x++) {
+      for(let y = 0; y < this.height; y++) {
         // if tile was assigned a `1`, run `drawWall()`
-        if (this.worldMap[i][j] === 1) {
-          this.drawWall(context, i, j);
+        if (this.worldMap[x][y] === 1) {
+          this.drawWall(context, x, y);
         }
       }
     }
@@ -93,7 +97,7 @@ class World {
   }
 
   drawWall(context, x, y) {
-    context.fillStyle = "#000";
+    context.fillStyle = 'DarkGreen';
     context.fillRect(
       x * this.tileSize,
       y * this.tileSize,

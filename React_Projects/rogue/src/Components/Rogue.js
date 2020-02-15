@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState } from 'react';
 import InputManager from "./InputManager";
-import Player from "./Player";
+import Spawn from "./Spawn";
 import World from "./World";
 
 // functional component with `props` destructured
@@ -22,12 +22,16 @@ const Rogue = ({ width, height, tileSize }) => {
   };
   // `useEffect` is a lifecycle hook, gets called when DOM changes
   useEffect(() => {
-    console.log("Create Map");
     let newWorld = new World();
     Object.assign(newWorld, world);
     // call to create map with walls in it
     newWorld.createCellularMap();
+    // render player
     newWorld.startEmptySpace(world.player);
+    // set up items to spawn
+    let renSpawn = new Spawn(newWorld);
+    // spawn items
+    renSpawn.spawnLoot(10);
     setWorld(newWorld);
     // empty array keeps map from re-rendering with each player entity move
     // eslint-disable-next-line
@@ -45,7 +49,6 @@ const Rogue = ({ width, height, tileSize }) => {
   useEffect(() => {
     const ctx = canvasRef.current.getContext('2d');
     ctx.clearRect(0,0, width * tileSize, height * tileSize);
-    // make sure to draw `World` before `player`
     world.draw(ctx);
   });
   return (
@@ -53,7 +56,8 @@ const Rogue = ({ width, height, tileSize }) => {
       ref={canvasRef}
       width={width * tileSize}
       height={height * tileSize}
-      style={{ border: '1px solid black'}}
+      style={{ border: '1px solid black', background: 'black'
+}}
     >
     </canvas>
   );
