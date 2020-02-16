@@ -9,8 +9,8 @@ class World {
     this.entities = [new Player(0, 0, 16)];
     // Double-Nested Array to create `worldMap` grid
     this.worldMap = new Array(this.width);
-    for(let i = 0; i < this.width; i++) {
-      this.worldMap[i] = new Array(this.height);
+    for(let x = 0; x < this.width; x++) {
+      this.worldMap[x] = new Array(this.height);
     }
   }
 
@@ -20,6 +20,11 @@ class World {
 
   add(entity) {
     this.entities.push(entity);
+  }
+
+  remove(entity) {
+    // filter out picked-up entity from entities array
+    this.entities = this.entities.filter(e => e !== entity);
   }
 
   startEmptySpace(entity) {
@@ -42,16 +47,28 @@ class World {
     );
   }
 
+  // check tile if there is an entity object in that location
+  entInLoc(x, y) {
+    return this.entities.find(entity => entity.x === x && entity.y === y);
+  }
+
   movePlayer(dx, dy) {
     let tempPlayer = this.player.copyPlayer();
     tempPlayer.move(dx, dy);
+    // create object for entInLoc to check against
+    let entity = this.entInLoc(tempPlayer.x, tempPlayer.y);
+    // if there is an `entity`, what is it
+    if(entity) {
+      console.log(entity.attr.name);
+      entity.action('bump', this);
+      return;
+    }
+
     if(this.isWall(tempPlayer.x, tempPlayer.y)) {
       console.log(`Wall Blocking ${tempPlayer.x}:${tempPlayer.y}`);
     } else {
       this.player.move(dx, dy);
     }
-
-
   }
 
   // createRandomMap() {
@@ -97,7 +114,7 @@ class World {
   }
 
   drawWall(context, x, y) {
-    context.fillStyle = 'DarkGreen';
+    context.fillStyle = '#013220';
     context.fillRect(
       x * this.tileSize,
       y * this.tileSize,

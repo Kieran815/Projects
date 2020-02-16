@@ -9,9 +9,15 @@ class Player extends Entity {
     health: 10,
   }
 
+  inventory = [];
+
   move(dx, dy) {
     this.x+= dx;
     this.y+= dy;
+  }
+
+  add(item) {
+    this.inventory.push(item);
   }
 
   copyPlayer = () => {

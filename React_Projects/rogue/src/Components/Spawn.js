@@ -1,4 +1,5 @@
 import Loot from "./Loot";
+import Monster from "./Monster";
 
 // construct lootTable of items that will be placed
 const lootTable = [
@@ -7,6 +8,12 @@ const lootTable = [
   {name: "Gold", color: "yellow", ascii: "$", offset: {x: 3, y: 3}},
   {name: "Armor", color: "white", ascii: "@", offset: {x: 4, y: 3}},
 ]
+
+const enemyTable = [
+  {name: "Goblin", color: "green", ascii: "**"},
+
+
+];
 
 class Spawn {
 
@@ -29,6 +36,17 @@ class Spawn {
         randoInt(this.world.height),
         this.world.tileSize,
         lootTable[randoInt(lootTable.length)]
+      );
+    });
+  }
+
+  spawnEnemy(spawnCount) {
+    this.initSpawn(spawnCount, () => {
+      return new Monster(
+        randoInt(this.world.width),
+        randoInt(this.world.height),
+        this.world.tileSize,
+        enemyTable[randoInt(enemyTable.length)]
       );
     });
   }

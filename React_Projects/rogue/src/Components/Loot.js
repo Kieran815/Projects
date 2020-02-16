@@ -4,7 +4,9 @@ class Loot extends Entity {
 
   action(verb, world) {
     if (verb === "bump") {
-      console.log("Looted", this);
+      console.log("Looted", this.attr.name);
+      world.player.add(this);
+      world.remove(this);
     }
     if (verb === "drop") {
       console.log("drop", this);

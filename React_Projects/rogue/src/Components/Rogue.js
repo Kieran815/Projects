@@ -33,7 +33,7 @@ const Rogue = ({ width, height, tileSize }) => {
     // spawn items
     renSpawn.spawnLoot(10);
     setWorld(newWorld);
-    // empty array keeps map from re-rendering with each player entity move
+    // empty array saves as `world` map to keep from re-rendering with each player/entity move
     // eslint-disable-next-line
   },[]);
 
@@ -52,14 +52,20 @@ const Rogue = ({ width, height, tileSize }) => {
     world.draw(ctx);
   });
   return (
-    <canvas
-      ref={canvasRef}
-      width={width * tileSize}
-      height={height * tileSize}
-      style={{ border: '1px solid black', background: 'black'
-}}
-    >
-    </canvas>
+    <div>
+      <canvas
+        ref={canvasRef}
+        width={width * tileSize}
+        height={height * tileSize}
+        style={{ border: '1px solid black', background: '#000'}}
+      >
+      </canvas>
+      <ol>
+        {world.player.inventory.map((item, index) => (
+          <li key = {index}>{item.attr.name}</li>
+        ))}
+      </ol>
+    </div>
   );
 }
 
