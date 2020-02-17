@@ -7,6 +7,7 @@ class World {
     this.height = height;
     this.tileSize = tileSize;
     this.entities = [new Player(0, 0, 16)];
+    this.history = ['You Have Entered the Black Forest', '...'];
     // Double-Nested Array to create `worldMap` grid
     this.worldMap = new Array(this.width);
     for(let x = 0; x < this.width; x++) {
@@ -30,7 +31,7 @@ class World {
   startEmptySpace(entity) {
     for(let x = entity.x; x < this.width; x++) {
       for(let y = entity.y; y < this.height; y++) {
-        if(this.worldMap[x][y] === 0) {
+        if(this.worldMap[x][y] === 0 && !this.entInLoc(x, y)) {
           entity.x = x;
           entity.y = y;
           return
@@ -57,29 +58,17 @@ class World {
     tempPlayer.move(dx, dy);
     // create object for entInLoc to check against
     let entity = this.entInLoc(tempPlayer.x, tempPlayer.y);
-    // if there is an `entity`, what is it
+    // if there is an `entity`,
     if(entity) {
-      console.log(entity.attr.name);
+      // what is it, what are you doing to it
       entity.action('bump', this);
       return;
     }
 
-    if(this.isWall(tempPlayer.x, tempPlayer.y)) {
-      console.log(`Wall Blocking ${tempPlayer.x}:${tempPlayer.y}`);
-    } else {
+    if(!this.isWall(tempPlayer.x, tempPlayer.y)) {
       this.player.move(dx, dy);
     }
   }
-
-  // createRandomMap() {
-  //   //Double For-Loop to run through every item in `worldMap` double-nested array
-  //   for(let i = 0; i < this.width; i++) {
-  //     for(let j = 0; j < this.height; j++) {
-  //       // assigns random `1` or `0` to every tile
-  //       this.worldMap[i][j] = Math.round(Math.random());
-  //     }
-  //   }
-  // }
 
   // added rot-js for improved map functionality
   createCellularMap() {
@@ -121,6 +110,16 @@ class World {
       this.tileSize,
       this.tileSize);
   }
+
+  addToHistory(history) {
+    this.history.push(history);
+    // if history gets longer than 5...
+    if(this.history.length > 4) {
+      // remove oldest history item (this.history[0])
+      this.history.shift();
+    }
+  }
+
 }
 
 export default World;

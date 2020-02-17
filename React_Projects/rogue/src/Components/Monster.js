@@ -5,9 +5,9 @@ class Monster extends Entity {
     if (verb === "bump") {
       // attack Monster
       world.addToHistory(`Player Attacks ${this.attr.name}!`);
-      this.attr.health = this.attr.health - 2;
+      this.attr.health = this.attr.health - (this.attr.weapon|| 2);
       if (this.attr.health <= 0) {
-        world.addToHitory(`${this.attr.name} has been Slain.`);
+        world.addToHistory(`${this.attr.name} has been Slain.`);
         world.remove(this);
       } else {
         world.addToHistory(`${this.attr.name} Took Damage!!! Health is now ${this.attr.health}`);
@@ -15,7 +15,7 @@ class Monster extends Entity {
         if (world.player.attr.health <= 0) {
           world.addToHistory("You Died!!!!")
         } else {
-          world.addToHitory(`You have ${world.player.attr.health} life remaining.`);
+          world.addToHistory(`You have ${world.player.attr.health} life remaining.`);
         }
       }
     }
