@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "greenlantern-kmm",
     "public": "public",
     "ignore": [
       "firebase.json",
